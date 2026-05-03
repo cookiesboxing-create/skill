@@ -111,10 +111,10 @@ export default function LandingPage() {
             transition={{ delay: 0.3 }}
             className="flex flex-col items-center"
           >
-            <button className="relative w-full sm:w-auto px-8 py-4 bg-slate-900 text-white text-lg font-bold rounded-xl shadow-xl hover:bg-slate-800 transition-colors flex items-center justify-center gap-3">
+            <Link to="/access" className="relative w-full sm:w-auto px-8 py-4 bg-slate-900 text-white text-lg font-bold rounded-xl shadow-xl hover:bg-slate-800 transition-colors flex items-center justify-center gap-3">
               <span>GET INSTANT ACCESS NOW</span>
               <ArrowRight className="w-5 h-5" />
-            </button>
+            </Link>
             <div className="mt-4 flex flex-col md:flex-row items-center gap-4 text-sm text-slate-500 font-medium">
               <span className="flex items-center gap-2 text-emerald-600 font-semibold"><ShieldCheck className="w-4 h-4" /> 100% Risk-Free Guarantee</span>
               <span className="hidden md:block text-slate-300">|</span>
@@ -302,9 +302,9 @@ RateLimitError: 429 Too Many Requests
               ))}
             </div>
             <div className="pt-4">
-              <button className="px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/30 hover:bg-indigo-700 transition-colors flex items-center gap-2">
+              <Link to="/access" className="px-8 py-4 bg-indigo-600 text-white font-bold rounded-xl shadow-lg shadow-indigo-600/30 hover:bg-indigo-700 transition-colors inline-flex items-center gap-2">
                 Explore Skills <ArrowRight className="w-5 h-5" />
-              </button>
+              </Link>
             </div>
           </div>
           <div className="flex-1 w-full">
@@ -410,9 +410,9 @@ RateLimitError: 429 Too Many Requests
                     <span className="text-xs font-bold text-slate-600">{skill.sold}</span>
                   </div>
                 </div>
-                <button className="px-4 py-3 bg-slate-900 hover:bg-indigo-600 text-white text-sm font-bold rounded-xl transition-colors w-full">
+                <Link to="/access" className="px-4 py-3 bg-slate-900 hover:bg-indigo-600 text-white text-sm font-bold rounded-xl transition-colors w-full flex items-center justify-center">
                   Learn More
-                </button>
+                </Link>
               </div>
             </motion.div>
           ))}
@@ -494,11 +494,12 @@ RateLimitError: 429 Too Many Requests
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
               />
-              <button 
-                className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-8 py-4 sm:py-0 transition-colors text-lg sm:rounded-xl shadow-lg shadow-indigo-200"
+              <Link
+                to="/access" 
+                className="bg-indigo-600 hover:bg-indigo-700 text-white font-bold px-8 py-4 sm:py-0 transition-colors text-lg sm:rounded-xl shadow-lg shadow-indigo-200 flex items-center justify-center"
               >
                 Access Now
-              </button>
+              </Link>
             </div>
             <p className="text-sm text-slate-500 flex items-center justify-center gap-2 font-medium mt-2">
               <Lock className="w-4 h-4" /> Secure 256-bit encryption. No spam.
@@ -510,8 +511,9 @@ RateLimitError: 429 Too Many Requests
       {/* FOOTER */}
       <footer className="bg-white border-t border-slate-200 py-8 text-center text-sm text-slate-500">
         <div className="container mx-auto flex flex-col md:flex-row items-center justify-between px-6">
-          <p className="font-bold text-slate-400 uppercase tracking-widest">© 2026 AgentSkills.pro. All rights reserved.</p>
-          <div className="flex gap-6 mt-4 md:mt-0 font-semibold">
+          <p className="font-bold text-slate-400 uppercase tracking-widest">© 2026 AgentSkills.pro by Cookies Consulting INC.</p>
+          <div className="flex gap-6 mt-4 md:mt-0 font-semibold flex-wrap justify-center">
+            <Link to="/about" className="hover:text-indigo-600 transition-colors">About Us</Link>
             <Link to="/terms" className="hover:text-indigo-600 transition-colors">Terms of Service</Link>
             <Link to="/privacy" className="hover:text-indigo-600 transition-colors">Privacy Policy</Link>
             <Link to="/contact" className="hover:text-indigo-600 transition-colors">Contact</Link>
